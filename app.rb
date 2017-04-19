@@ -9,5 +9,6 @@ get('/') do
 end
 
 get('/result') do
-  @display = params.fetch()
+  @display = params.fetch("word").palindrome?()
+  erb(:result)
 end
