@@ -38,3 +38,14 @@ class String
     end
   end
 end
+
+class String
+  def find_and_replace(find, replacewith)
+    # split_self = self.split()
+    # index_of_find = split_self.index(find)
+    # split_self.place
+    replaced = self.sub!(find, replacewith)
+    puts(replaced)
+    replaced
+  end
+end

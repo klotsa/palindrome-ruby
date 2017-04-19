@@ -12,3 +12,9 @@ describe('String#palindrome?') do
     expect("Race fast, safe car".palindrome?()).to eq(true)
   end
 end
+
+describe('String#find_and_replace') do
+  it("replaces string with parameter") do
+    expect("I like cats".find_and_replace("cats", "dogs")).to eq("I like dogs")
+  end
+end

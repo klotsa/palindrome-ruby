@@ -1,10 +1,29 @@
-<p>
+<h3>
   Palindrome
-</p>
-<form action="/result">
+</h3>
+<form action="/palindrome_result">
   <div class="form-group">
-     <label for="word">Is this a palindrome?
-</label>
+     <label for="word">Is this a palindrome?</label>
      <input id="word" name="word" class="form-control" type="text">
   </div>
   <button type="submit" class="btn-success">Send</button>
+</form>
+
+<h3>
+  Find and Replace
+</h3>
+<form action="/find_and_replace_result">
+  <div class="form-group">
+     <label for="word2">Find and Replace</label>
+     <input id="word2" name="word2" class="form-control" type="text">
+  </div>
+  <div class="form-group">
+     <label for="find">Find</label>
+     <input id="find" name="find" class="form-control" type="text">
+  </div>
+  <div class="form-group">
+     <label for="replace">Replace</label>
+     <input id="replace" name="replace" class="form-control" type="text">
+  </div>
+  <button type="submit" class="btn-success">Send</button>
+</form>

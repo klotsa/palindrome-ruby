@@ -11,3 +11,12 @@ describe('String#palindrome', {:type => :feature}) do
     expect(page).to have_content(true)
   end
 end
+
+# describe('String#find_and_replace', {:type => :feature}) do
+#   it('replaces string with passed parameter') do
+#     visit('/')
+#     fill_in('word', :with => 'racecar')
+#     click_button('Send')
+#     expect(page).to have_content(true)
+#   end
+# end

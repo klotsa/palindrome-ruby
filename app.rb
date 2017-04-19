@@ -8,7 +8,12 @@ get('/') do
   erb(:index)
 end
 
-get('/result') do
+get('/palindrome_result') do
   @display = params.fetch("word").palindrome?()
-  erb(:result)
+  erb(:palindrome_result)
+end
+
+get('/find_and_replace_result') do
+  @display = params.fetch("word2").find_and_replace(params.fetch("find"), params.fetch("replace"))
+  erb(:find_and_replace_result)
 end
