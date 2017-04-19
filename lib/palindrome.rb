@@ -41,11 +41,31 @@ end
 
 class String
   def find_and_replace(find, replacewith)
-    # split_self = self.split()
-    # index_of_find = split_self.index(find)
-    # split_self.place
-    replaced = self.sub!(find, replacewith)
+    split_self = self.split()
+    index_of_find = split_self.index(find)
+    split_self[index_of_find] = replacewith
+    replaced = split_self.join(" ")
+
+    # replaced = self.sub!(find, replacewith)
     puts(replaced)
     replaced
+  end
+end
+
+class Fixnum
+  def coins
+    money = self
+    coins = []
+    coin_options = {"quarter"=>25, "dime"=>10, "nickel"=>5, "penny"=>1}
+    coin_options.keys.each() do |key|
+      coin = coin_options.fetch(key)
+      if money >= coin
+        num_coins = (money/coin).floor()
+        money -= num_coins * coin
+        coins.push(num_coins.to_s() + " " + key)
+      end
+    end
+    puts(coins)
+    coins
   end
 end
